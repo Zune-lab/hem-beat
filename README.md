@@ -1,21 +1,14 @@
-# Hem Beat
+# Hẻm Beat
 
-Game tạo nhạc kiểu Incredibox (tên lấy từ chữ "hẻm"), nhưng âm thanh là của xóm Việt Nam: trống, mõ, đàn bầu, đàn tranh, hò, còi xe máy, ve sầu, tiếng mưa, tiếng rao...
+Game tạo nhạc kiểu Incredibox với âm thanh xóm Việt Nam, phong cách tranh Đông Hồ. 20 nhạc cụ, 7 người, 3 bonus ẩn.
 
-**Màn 1 · Hẻm Sài Gòn:** 7 nhân vật, 20 nhạc cụ chia 4 nhóm (Nhịp, Hiệu ứng, Giai điệu, Giọng).
+**Stack:** React + Vite + Tailwind v4 + GSAP + three.js. Âm thanh tạo hoàn toàn bằng Web Audio API (không có file âm thanh).
 
-## Cách chơi
+```
+npm install
+npm run dev
+```
 
-- Kéo nhạc cụ ở khay dưới thả lên một người: người đó đổi trang phục và hát, nhạc vào ở nhịp kế tiếp.
-- Thả nhạc cụ khác lên người đã có để đổi. Kéo người sang ô khác để đổi chỗ.
-- Bấm vào người để tắt hoặc bật tiếng. Kéo người ra ngoài để gỡ nhạc cụ.
-- Có 3 bonus ẩn: ghép đúng 4 nhạc cụ để mở khóa.
-- Nút **Chia sẻ** copy link dạng `#mix-...` chứa cả bản mix của bạn.
+**Cách chơi:** kéo (hoặc chạm giữ rồi kéo trên điện thoại) nhạc cụ thả lên người. Bấm người để tắt/bật tiếng. Phím `Space` phát/dừng, `R` ngẫu nhiên. Nút **Tự phối** tự đổi nhạc cụ mỗi 8 giây.
 
-## Kỹ thuật
-
-- Không có file âm thanh nào: mọi tiếng đều được tạo bằng Web Audio API, nên repo rất nhẹ và không dính bản quyền.
-- Một file `index.html`, không cần build. Mở thẳng hoặc đưa lên GitHub Pages.
-- Thêm âm thanh mới: thêm một object vào mảng `S0` hoặc `NS` trong `index.html` (`p(t, s)` phát tiếng ở thời điểm `t`, bước `s` trong 32 bước), thêm trang phục tương ứng vào `L0` hoặc `NL`.
-
-Repo gốc: https://github.com/Zune-lab/hem-beat
+Bản HTML đơn cũ nằm ở `legacy/index.html`.
